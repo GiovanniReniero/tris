@@ -30,31 +30,17 @@ Render.run(renderTris) //run the render object created above
 //Render needs a runner to connect world and engine
 Runner.run(Runner.create(), engine);
 
-const circle = Bodies.circle( width/2, height/2, height/5,
-  {
-    // label: "cerchio",
-    // isStatic: true,
-  }
-)
-
-World.add(world, circle)
-
 //create borders
-
 const borders =[
-
   Bodies.rectangle(width/2, 0, width, 20, {
     isStatic: true
   }),
-
   Bodies.rectangle(width/2, height, width, 20, {
     isStatic: true
   }),
-
   Bodies.rectangle(0, height/2, 20, height, {
     isStatic: true
   }),
-
   Bodies.rectangle(width, height/2, 20, height, {
     isStatic: true
   })
@@ -65,3 +51,30 @@ World.add(world, borders)
 
 
 //create grid
+
+const grid = [
+  Bodies.rectangle((width/2 - width*0.14), height/2, 5, height*0.8,
+    {
+      isStatic: true
+    }
+  ),
+  Bodies.rectangle((width/2 + width*0.14), height/2, 5, height*0.8,
+    {
+      isStatic: true
+    }
+  ),
+  Bodies.rectangle(width/2, (height/2 - width*0.14), width*0.8, 5,
+    {
+      isStatic: true
+    }
+  ),
+  Bodies.rectangle(width/2, (height/2 + width*0.14), width*0.8, 5,
+    {
+      isStatic: true
+    }
+  ),
+]
+
+World.add(world, grid)
+
+//the game
