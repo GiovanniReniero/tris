@@ -4,3 +4,13 @@ body{
   text-decoration: none;
   background-color: burlywood;
 }
+
+body h1 {
+  text-align: center;
+}
+
+#tela{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
